@@ -46,16 +46,21 @@ console.log(user1.getFullName());
 console.log(user2.getFullName());
 
 const myObj = {
-    name: "kim",
+    name: "AN",
+    configurable: false,
 };
 
 // 객체의 원소를 삭제할 경우
+console.log("Before Delete");
+console.log(myObj);
 delete myObj.name;
+console.log("Delete");
+console.log(myObj);
 
 // Object.create 메소드
 // 첫번째 인자는 부모 객체로써 작동되게 될 객체를 입력받음 (추후 상세하게 다룰 예정, prototype)
 // 여기서는 null
-const myObj = Object.create(null, {
+const myObj2 = Object.create(null, {
     name: {
         value: "An Seongchan",
         writable: true,
@@ -64,9 +69,10 @@ const myObj = Object.create(null, {
 });
 
 // 옵션이 wrtable ture 일 경우
-myObj.name = 'anphaca';
+myObj2.name = 'anphaca';
 
 // configurable false이기 때문에 삭제 불가능
-delete myObj.name;
+delete myObj2.name;
+
 
  

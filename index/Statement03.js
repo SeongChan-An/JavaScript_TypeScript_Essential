@@ -7,7 +7,7 @@ for (const item of arr) {
 }
 
 // 배열에서 값을 순차적으로 빼올 때 사용 
-for (const itme in arr) {
+for (const item in arr) {
     console.log(item);
 }
 
