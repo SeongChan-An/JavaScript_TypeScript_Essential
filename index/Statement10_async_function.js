@@ -14,14 +14,14 @@ function delay(millisecond) {
 // 기존의 promise 를 이요한 코드
 // then 과 catch에 callback 함수를 통해 원하는 동작을 하도록 분기한다.
 // delay 시간을 줌으로써 비동기적인 프로그래밍을 구현한다.
-delay(3000)
-    .then((result) => {
-        console.log("done promise! " + result);
-    })
-    .catch((error) => {
-        console.error("fail promise! " + error);
-    });
-    console.log("----------------------------");
+// delay(3000)
+//     .then((result) => {
+//         console.log("done promise! " + result);
+//     })
+//     .catch((error) => {
+//         console.error("fail promise! " + error);
+//     });
+//     console.log("----------------------------");
 
     // 비동기 함수, 함수 앞에 async 예약어를 추가
     // 기존의 promise 객체를 반환하는 함수가 있다면
