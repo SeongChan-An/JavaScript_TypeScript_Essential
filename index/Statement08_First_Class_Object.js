@@ -46,6 +46,7 @@ function salePrice(discountRate, price) {
 console.log("여름 세일 - " + salePrice(30, 567000));
 console.log("겨울 세일 - " + salePrice(10, 567000));
 
+// 커링
 function discountPrice(discountRate) {
     return function (price) {
         return price - (price * (discountRate * 0.01));
