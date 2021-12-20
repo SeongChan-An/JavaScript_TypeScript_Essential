@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling, Capturing</title>
+    <style>
+        body { padding:50px; }
+        .box1 { padding:50px; background:red; }
+        .box2 { padding:50px; background:blue; }
+        .box3 { padding:50px; background:yellow; }
+    </style>
+</head>
+<body>
+    <div class="box1" data-name="red">
+        <div class="box2" data-name="blue">
+            <div class="box3" data-name="yellow">
+
+            </div>
+        </div>
+    </div>
+    <script src="Structure23_EventSystem.js" type="module"></script>
+</body>
+</html>
