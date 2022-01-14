@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Client, Page Coordinates</title>
+    <style>
+      :root {
+        background-color: #000;
+      }
+      body {
+        position: relative;
+      }
+
+      .box {
+        width: 250px;
+        height: 250px;
+        margin: 15px;
+        background-color: antiquewhite;
+      }
+      .lucky {
+        background-color: lightgoldenrodyellow;
+      }
+
+      aside {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <aside class="buttons">
+      <button type="button" id="by" class="scroll-by">
+        Scroll by 100px(y)
+      </button>
+      <button type="button" id="to" class="scroll-to">
+        Scroll to 100px(y)
+      </button>
+      <button type="button" id="into" class="scroll-into">
+        Scroll into lucky
+      </button>
+    </aside>
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    <div class="box">4</div>
+    <div class="box">5</div>
+    <div class="box">6</div>
+    <div class="box lucky">7</div>
+    <div class="box">8</div>
+    <div class="box">9</div>
+    <div class="box">10</div>
+    <script>
+      const lucky = document.querySelector(".lucky");
+
+      lucky.addEventListener("click", (event) => {
+        const rect = lucky.getBoundingClientRect();
+        console.log(`clinet: ${event.clientX}, ${event.clientY}`);
+        console.log(`clinet: ${event.pageX}, ${event.pageY}`);
+      });
+      const scrollBy = document.querySelector(".scroll-by");
+      const scrollTo = document.querySelector(".scroll-to");
+      const scrollInto = document.querySelector(".scroll-into");
+
+      const btn = document.querySelector("aside");
+
+      btn.addEventListener("click", (e) => {
+        console.log("clicked");
+        switch (e.target.id) {
+          case "by":
+            console.log("click");
+            window.scrollBy({ top: 100, left: 0, behavior: "smooth" });
+            break;
+          case "to":
+            window.scrollTo({ top: 100, left: 0, behavior: "smooth" });
+            break;
+          case "into":
+            lucky.scrollIntoView({ behavior: "smooth" });
+            break;
+        }
+      });
+    </script>
+  </body>
+</html>

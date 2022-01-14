@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Size</title>
+    <style>
+      .box {
+        display: inline-block;
+        background-color: antiquewhite;
+        padding: 16px;
+        margin-top: 16px;
+        font-size: 48px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">Window Size</div>
+    <script>
+      const tag = document.querySelector(".box");
+      function updateTag() {
+        tag.innerHTML = `
+          window.screen: ${window.screen.width}, ${window.screen.height} <br/>
+          window.outer: ${window.outerWidth}, ${window.outerWidth} <br/>
+          window.inner: ${window.innerWidth}, ${window.innerWidth} <br/>
+          document.Element.clientWidth: ${document.documentElement.clientWidth}, ${document.documentElement.clientHeight} <br/>
+        `;
+      }
+
+      window.addEventListener("resize", () => {
+        updateTag();
+      });
+      updateTag();
+    </script>
+  </body>
+</html>
