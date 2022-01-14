@@ -1,7 +1,18 @@
-﻿# JavaScript_Essential
+﻿# JavaScript and TypeScript Essential
 
-여러 강의와 유튜브 책들을 보면서 JavaScript 활용하기 위해 실습하고 정리한 내용을 반복학습과 참고할 데이터로 이용할 저장소입니다.  
+**여러 강의와 유튜브 책들을 보면서 JavaScript 활용하기 위해 실습하고 정리한 내용을 반복학습과 참고할 데이터로 이용할 저장소입니다.**  
 This repository to be added when I learned new things or practiced JS skill thinking.
+
+---
+
+TypeScript 학습을 하면서 TypeScript 학습 내용도 추가 할 예정입니다.  
+Started learning about TypeScript,  
+will be adding content about TypeScript.
+
+## 참고 서적
+
+- [JavaScript Deep Dive](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9791158392239&orderClick=LEa&Kc=)
+- [Effectice TypeScript](http://www.kyobobook.co.kr/product/detailViewKor.laf?ejkGb=KOR&mallGb=KOR&barcode=9788966263134&orderClick=LEa&Kc=)
 
 ## 설명
 
@@ -37,7 +48,7 @@ This repository to be added when I learned new things or practiced JS skill thin
 
 > 기타 사이트
 
--
+- [개발바닥 Youtube](https://www.youtube.com/channel/UCSEOUzkGNCT_29EU_vnBYjg)
 
 > 개발환경
 
