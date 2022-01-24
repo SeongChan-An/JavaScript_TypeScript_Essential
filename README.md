@@ -71,6 +71,8 @@ will be adding content about TypeScript.
       - CSS
         - Color Highlight
         - CSS Navigation
+      - JavaScript
+        - REST Client
       - React
         - ES7 React/Redux/GraphQL/React-Native-snippet
         - vscode-styled-component

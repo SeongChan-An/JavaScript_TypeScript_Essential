@@ -3,6 +3,12 @@
 [Git](https://github.com/tastejs/hacker-news-pwas)
 [API Doc](https://github.com/tastejs/hacker-news-pwas/blob/master/docs/api.md)
 
+## 기본세팅
+
+- npm init y
+- npm install -g parcel-bundler --save
+- npm install typescript --save-dev
+
 ## 사용한 개념
 
 ### PWA ?
@@ -25,3 +31,16 @@
 ## 참고사이트
 
 - [CDN JS](https://cdnjs.com/)
+
+## JS & TS 관련 문법
+
+- [JS 문법 참고](../../01..Reference)
+- 추가
+  - [Type Alias](https://www.typescriptlang.org/docs/handbook/advanced-types.html)
+  - [Type Alias](https://poiemaweb.com/typescript-alias)
+  - [제너릭 Generic](https://www.typescriptlang.org/ko/docs/handbook/2/generics.html)
+  ```tsx
+  function identity<Type>(arg: Type): Type {
+    return arg;
+  }
+  ```

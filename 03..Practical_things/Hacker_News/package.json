@@ -1,7 +1,7 @@
 {
-  "name": "006..essential",
+  "name": "hackernews",
   "version": "1.0.0",
-  "description": "",
+  "description": "[Git](https://github.com/tastejs/hacker-news-pwas)\r [API Doc](https://github.com/tastejs/hacker-news-pwas/blob/master/docs/api.md)",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,10 +9,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "parcel-bundler": "^1.12.5"
-  },
-  "type": "module",
   "devDependencies": {
     "typescript": "^4.5.5"
   }
