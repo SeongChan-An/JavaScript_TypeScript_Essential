@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Momentum App</title>
+  </head>
+  <body>
+    <section class="left"></section>
+    <section class="center">
+      <section class="cTop"></section>
+      <section class="cMiddle">
+        <h2 id="clock" class="txtClock">00:00:00</h2>
+        <form class="hidden loginForm" id="login-form">
+          <input
+            required
+            maxlength="15"
+            type="text"
+            placeholder="What is your name?"
+            class="inpLogin"
+          />
+          <input type="submit" value="Log In" class="inpLogin" />
+        </form>
+        <h1 class="hidden greetings" id="greeting"></h1>
+      </section>
+      <section class="cBottom">
+        <div class="cbTop">
+          <form id="todo-form">
+            <input
+              class="inp-todo"
+              type="text"
+              placeholder="Write a To  Do and Press Enter"
+              required
+            />
+          </form>
+          <ul id="todo-list" class="todoTable"></ul>
+        </div>
+        <div class="cbBottom">
+          <div id="quote">
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </section>
+    </section>
+    <section class="right">
+      <div id="weather">
+        <span></span>
+        <span></span>
+      </div>
+    </section>
+
+    <div class="optionButtons">
+      <button class="btnChangeBg">Change Back Ground</button>
+      <button class="btnChangeTimeFormat">Change Time Format</button>
+    </div>
+
+    <script src="./js/greetings.js"></script>
+    <script src="./js/clock.js"></script>
+    <script src="./js/quotes.js"></script>
+    <script src="./js/background.js"></script>
+    <script src="./js/todo.js"></script>
+    <script src="./js/weather.js"></script>
+  </body>
+</html>

@@ -1,7 +1,6 @@
 const items = document.querySelector(".items");
 const form = document.querySelector(".input_form");
 const input = document.querySelector(".footer__input");
-const addBtn = document.querySelector(".footer__button");
 const resetBtn = document.querySelector(".all-delete");
 
 resetBtn.addEventListener("click", () => {
