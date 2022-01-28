@@ -1,36 +1,49 @@
 // type alias
-type Store = {
+// type Store = {
+//   currentPage: number;
+//   feeds: NewsFeed[];
+// };
+
+// interface
+interface Store {
   currentPage: number;
   feeds: NewsFeed[];
-};
+}
 
-type News = {
-  id: number;
-  time_ago: string;
-  title: string;
-  url: string;
-  user: string;
-  content: string;
-};
+interface News {
+  readonly id: number;
+  readonly time_ago: string;
+  readonly title: string;
+  readonly url: string;
+  readonly user: string;
+  readonly content: string;
+}
 
-type NewsFeed = News & {
-  comments_count: number;
-  points: number;
+// type
+// type NewsFeed = News & {
+//   comments_count: number;
+//   points: number;
+//   read?: boolean; // optional 있을 수도 있고 없을수도 있을 때 ? 사용
+// };
+
+// interface
+interface NewsFeed extends News {
+  readonly comments_count: number;
+  readonly points: number;
   read?: boolean; // optional 있을 수도 있고 없을수도 있을 때 ? 사용
-};
+}
 
-type NewsDetail = News & {
-  comments: NewsComment[];
-};
+interface NewsDetail extends News {
+  readonly comments: NewsComment[];
+}
 
-type NewsComment = News & {
-  comments: NewsComment[];
-  level: number;
-};
+interface NewsComment extends News {
+  readonly comments: NewsComment[];
+  readonly level: number;
+}
 
 const container: HTMLElement | null = document.getElementById("root");
 const ajax: XMLHttpRequest = new XMLHttpRequest();
-const content = document.createElement("div");
 const NEWS_URL = "https://api.hnpwa.com/v0/news/1.json";
 const CONTENT_URL = "https://api.hnpwa.com/v0/item/@id.json";
 const store: Store = {
@@ -39,13 +52,40 @@ const store: Store = {
 };
 const MAX_ITEM = 10;
 
-// Generic <>
-function getData<AjaxResponse>(url: string): AjaxResponse {
-  ajax.open("GET", url, false);
-  ajax.send();
+class Api {
+  url: string;
+  ajax: XMLHttpRequest;
+  constructor(url: string) {
+    this.url = url;
+    this.ajax = new XMLHttpRequest();
+  }
 
-  return JSON.parse(ajax.response);
+  protected getRequest<AjaxResponse>(): AjaxResponse {
+    this.ajax.open("GET", this.url, false);
+    this.ajax.send();
+    return JSON.parse(this.ajax.response);
+  }
 }
+
+class NewsFeedApi extends Api {
+  getData(): NewsFeed[] {
+    return this.getRequest<NewsFeed[]>();
+  }
+}
+
+class NewsDetailApi extends Api {
+  getData(): NewsDetail {
+    return this.getRequest<NewsDetail>();
+  }
+}
+
+// Generic <>
+// function getData<AjaxResponse>(url: string): AjaxResponse {
+//   ajax.open("GET", url, false);
+//   ajax.send();
+
+//   return JSON.parse(ajax.response);
+// }
 
 function makeFeeds(feeds: NewsFeed[]): NewsFeed[] {
   for (let i = 0; i < feeds.length; i++) {
@@ -64,6 +104,7 @@ function updateView(html: string): void {
 }
 
 function newsFeed(): void {
+  const api = new NewsFeedApi(NEWS_URL);
   let newsFeed: NewsFeed[] = store.feeds;
   const newsList = [];
   const maxPage = Object.keys(newsFeed).length / MAX_ITEM;
@@ -93,7 +134,7 @@ function newsFeed(): void {
   `;
 
   if (newsFeed.length === 0) {
-    newsFeed = store.feeds = makeFeeds(getData<NewsFeed[]>(NEWS_URL));
+    newsFeed = store.feeds = makeFeeds(api.getData());
   }
 
   for (
@@ -146,9 +187,10 @@ function newsFeed(): void {
 
 function newsDetail(): void {
   const id = location.hash.substr(7);
-  const newsContent = getData<NewsDetail>(CONTENT_URL.replace("@id", id));
+  const api = new NewsDetailApi(CONTENT_URL.replace("@id", id));
+  const newsContent = api.getData();
 
-  let template = `
+  const template = `
   <div class="bg-gray-600 min-h-screen pb-8">
   <div class="bg-white text-xl">
     <div class="mx-auto px-4">

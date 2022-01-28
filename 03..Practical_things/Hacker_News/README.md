@@ -38,6 +38,7 @@
 - 추가
   - [Type Alias](https://www.typescriptlang.org/docs/handbook/advanced-types.html)
   - [Type Alias](https://poiemaweb.com/typescript-alias)
+  - [Interface](https://poiemaweb.com/typescript-interface)
   - [제너릭 Generic](https://www.typescriptlang.org/ko/docs/handbook/2/generics.html)
   ```tsx
   function identity<Type>(arg: Type): Type {
