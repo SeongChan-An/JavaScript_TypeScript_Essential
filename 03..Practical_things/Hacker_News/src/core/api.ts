@@ -1,19 +1,17 @@
 import { NewsFeed, NewsDetail } from "../types";
 
 export default class Api {
-  ajax: XMLHttpRequest;
+  xhr: XMLHttpRequest;
   url: string;
 
   constructor(url: string) {
-    this.ajax = new XMLHttpRequest();
+    this.xhr = new XMLHttpRequest();
     this.url = url;
   }
 
-  getRequest<AjaxResponse>(): AjaxResponse {
-    this.ajax.open("GET", this.url, false);
-    this.ajax.send();
-
-    return JSON.parse(this.ajax.response) as AjaxResponse;
+  async request<AjaxResponse>(): Promise<AjaxResponse> {
+    const response = await fetch(this.url);
+    return (await response.json()) as AjaxResponse;
   }
 }
 
@@ -22,8 +20,8 @@ export class NewsFeedApi extends Api {
     super(url);
   }
 
-  getData(): NewsFeed[] {
-    return this.getRequest<NewsFeed[]>();
+  async getData(): Promise<NewsFeed[]> {
+    return this.request<NewsFeed[]>();
   }
 }
 
@@ -32,7 +30,7 @@ export class NewsDetailApi extends Api {
     super(url);
   }
 
-  getData(): NewsDetail {
-    return this.getRequest<NewsDetail>();
+  async getData(): Promise<NewsDetail> {
+    return this.request<NewsDetail>();
   }
 }

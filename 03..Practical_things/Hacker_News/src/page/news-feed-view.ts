@@ -1,6 +1,6 @@
 import View from "../core/view";
 import { NewsFeedApi } from "../core/api";
-import { NewsStore } from "../types";
+import { NewsFeed, NewsStore } from "../types";
 import { NEWS_URL, MAX_ITEM } from "../config/config";
 
 const template = `
@@ -37,15 +37,16 @@ export default class NewsFeedView extends View {
 
     this.store = store;
     this.api = new NewsFeedApi(NEWS_URL);
-
-    if (!this.store.hasFeeds) {
-      this.store.setFeeds(this.api.getData());
-    }
   }
 
-  render = (page = "1"): void => {
+  render = async (page = "1"): Promise<void> => {
     this.store.currentPage = Number(page);
     this.store.maxPage = Number(Math.ceil(this.store.numberOfFeed) / MAX_ITEM);
+
+    if (!this.store.hasFeeds) {
+      this.store.setFeeds(await this.api.getData());
+    }
+
     for (
       let i = (this.store.currentPage - 1) * MAX_ITEM;
       i < this.store.currentPage * MAX_ITEM;
