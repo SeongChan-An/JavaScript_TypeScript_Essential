@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "strict": true,
-    "target": "ES2015",
+    "target": "ES6",
     "module": "CommonJS",
     "alwaysStrict": true,
     "noImplicitAny": true,

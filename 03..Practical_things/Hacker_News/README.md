@@ -61,3 +61,12 @@
     });
   }
   ```
+- [Using window in TS](https://icerabbit.tistory.com/131)
+
+```tsx
+declare global {
+  interface Window {
+    ...
+  }
+}
+```
