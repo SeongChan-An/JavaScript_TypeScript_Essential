@@ -49,6 +49,7 @@ will be adding content about TypeScript.
 > 기타 사이트
 
 - [개발바닥 Youtube](https://www.youtube.com/channel/UCSEOUzkGNCT_29EU_vnBYjg)
+- [PoiemaWeb](https://poiemaweb.com/)
 
 > 개발환경
 
