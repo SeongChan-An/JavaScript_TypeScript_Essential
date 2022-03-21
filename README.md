@@ -30,7 +30,12 @@ will be adding content about TypeScript.
 
 ## 포함된 토이 프로젝트 목록
 
-- TBD
+- [ToDO List](03..Practical_things/01..Todo_list)
+  : 간단하게
+- [Mometum_Clone](03..Practical_things/01..Mometum_Clone)
+  : 구글 크롬 익스텐션 클론
+
+- [Simple Game](03..Practical_things/02..SimpleGame/)
 
 ## 출처
 
@@ -55,25 +60,25 @@ will be adding content about TypeScript.
 
 - Visual Studio Code
   - 추천 Extension
-    - Theme Tool
-      - Dracula Official
-      - vscode-icons
-    - Code Convention
-      - Prettier - Code formatter (or Beautify)
-    - Debugging
-      - Code Runner
-      - JavaScript REPL
-    - Help Tools
-      - HTML
-        - ejs Snippets
-        - htmltagwrap
-        - Auto Rename tag
-        - HTML CSS Support
-      - CSS
-        - Color Highlight
-        - CSS Navigation
-      - JavaScript
-        - REST Client
-      - React
-        - ES7 React/Redux/GraphQL/React-Native-snippet
-        - vscode-styled-component
+    - **Theme Tool**
+      - [Dracula Official](https://marketplace.visualstudio.com/items?itemName=dracula-theme.theme-dracula)
+      - [vscode-icons](https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons)
+    - **Code Convention**
+      - [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) (or [Beautify](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode))
+    - **Debugging**
+      - [Code Runner](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner)
+      - [JavaScript REPL](https://marketplace.visualstudio.com/items?itemName=achil.vscode-javascript-repl)
+    - **Help Tools**
+      - _HTML_
+        - [ejs Snippets](https://marketplace.visualstudio.com/items?itemName=TaodongWu.ejs-snippets)
+        - [htmltagwrap](https://marketplace.visualstudio.com/items?itemName=bradgashler.htmltagwrap)
+        - [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag)
+        - [HTML CSS Support](https://marketplace.visualstudio.com/items?itemName=ecmel.vscode-html-css)
+      - _CSS_
+        - [Color Highlight](https://marketplace.visualstudio.com/items?itemName=naumovs.color-highlight)
+        - [CSS Navigation](https://marketplace.visualstudio.com/items?itemName=pucelle.vscode-css-navigation)
+      - _JavaScript_
+        - [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client)
+      - _React_
+        - [ES7 React/Redux/GraphQL/React-Native-snippet](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets)
+        - [vscode-styled-component](https://marketplace.visualstudio.com/items?itemName=styled-components.vscode-styled-components)
