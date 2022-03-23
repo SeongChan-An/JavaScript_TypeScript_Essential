@@ -15,7 +15,7 @@
   const boal: boolean = false;
 
   // undefined
-  let name: undefined; // 
+  let name: undefined; //
   let age: number | undefined;
   age = undefined;
   age = 1;
@@ -24,15 +24,15 @@
   }
 
   // null
-  let person: null; // 
+  let person: null; //
   let person2: string | null;
 
-  // unknown 
+  // unknown
   let notSure: unknown = 0;
   notSure = "he";
   notSure = true;
 
-  // any 
+  // any
   let anything: any = 0;
   anything = "hello";
 
@@ -41,7 +41,7 @@
     console.log("hello");
     return;
   }
-  let unusable: void = undefined; // 
+  let unusable: void = undefined; //
 
   // never
   function throwError(message: string): never {
@@ -49,10 +49,10 @@
     throw new Error(message);
     while (true) {}
   }
-  let neverEnding: never; // 
+  let neverEnding: never; //
 
   // objet
-  let obj: object; // 
+  let obj: object; //
   function acceptSomeObject(obj: object) {}
   acceptSomeObject({ name: "seongchan" });
   acceptSomeObject({ animal: "cat" });
