@@ -18,8 +18,8 @@ const student: Student = {
  * String Literal Types
  */
 type Name = "name";
-let ellieName: Name;
-ellieName = "name";
+let seongchanName: Name;
+seongchanName = "name";
 type JSON = "json"; // 이미 JSON이 lib에 내장되어 interface로 선언되어 있는지 확인하기,
 const json: JSON = "json";
 

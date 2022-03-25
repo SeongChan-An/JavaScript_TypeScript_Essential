@@ -29,7 +29,7 @@ function fetchNum(id: string): Promise<number> {
 }
 
 // JavaScript ✨ => TypeScript
-// Optional parameter
+// Optional parameter ?
 function printName(firstName: string, lastName?: string) {
   console.log(firstName);
   console.log(lastName); // undefined
