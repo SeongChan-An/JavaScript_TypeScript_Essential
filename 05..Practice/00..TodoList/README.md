@@ -19,3 +19,9 @@ Vanilia JS를 이용, Componet 형식으로 구현하기
 - [ ] 다중 컴포넌트
 - [ ] isCompleted 처리
 - [ ] setState
+
+## 참고 사이트
+
+- [parseInt](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt#syntax)
+  - 가급적이면 radix 값을 넣어주는 것이 좋다.
+  - 기본 값이 10이 아니기 때문에
